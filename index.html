@@ -1,57 +1,72 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
-  <script type="text/javascript">
-	atOptions = {
-		'key' : '6a4d8e8598afcc2a6363aa23d05df112',
-		'format' : 'iframe',
-		'height' : 60,
-		'width' : 468,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//separatelysmackfibber.com/6a4d8e8598afcc2a6363aa23d05df112/invoke.js"></script>
   <meta charset="UTF-8">
-  <title>ফলাফল</title>
+  <title>Fill The Form</title>
   <style>
-    body {
-      background: linear-gradient(to right, #ffecd2, #fcb69f);
-      font-family: 'Siyam Rupali', sans-serif;
+    body, html {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      font-family: 'Arial', sans-serif;
+    }
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      z-index: 1;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: 2;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .result-box {
-      background: white;
-      padding: 30px 50px;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      text-align: center;
       animation: fadeIn 2s ease-in-out;
     }
-    .result-box h1 {
-      color: #d32f2f;
-      font-size: 28px;
-      margin: 0;
+    .button {
+      padding: 20px 40px;
+      background-color: #00bcd4;
+      color: white;
+      font-size: 24px;
+      text-decoration: none;
+      border-radius: 12px;
+      transition: background 0.5s, transform 0.5s;
+      animation: bounce 2s infinite;
     }
-    .result-box p {
-      font-size: 18px;
-      color: #555;
-      margin-top: 10px;
+    .button:hover {
+      background-color: #00796b;
+      transform: scale(1.1);
     }
+
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
     }
   </style>
-<script type='text/javascript' src='//separatelysmackfibber.com/19/5c/18/195c186416f0a12831ae2a4ee87763df.js'></script></head>
+</head>
 <body>
-  <div class="result-box">
-    <h1>ফলাফল এখনো প্রকাশিত হয়নি</h1>
-    <p>দয়া করে কিছুক্ষণ পর আবার চেষ্টা করুন।</p>
-  </div>
-  <script type='text/javascript' src='//separatelysmackfibber.com/d2/ec/a4/d2eca4142edea229a165745fae063759.js'></script>
-</body> 
-  </html>
+
+<!-- Background iframe -->
+<iframe class="background" src="http://colorjet.rf.gd/index.html"></iframe>
+
+<!-- Dark overlay with button -->
+<div class="overlay">
+  <a href="form.html" class="button">Click here to fill the form</a>
+</div>
+
+</body>
+</html>
